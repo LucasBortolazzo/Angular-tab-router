@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { StartComponent } from './start/start.component';
+import { Tab1Component } from './tab1/tab1.component';
+import { Tab2Component } from './tab2/tab2.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+    { path: '', component: StartComponent, pathMatch: 'full' },
+    { path: 'tab1', component: Tab1Component },
+    { path: 'tab2', component: Tab2Component }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
